@@ -13,7 +13,7 @@ terraform {
     bucket = "my-terraform-state-bucket-ravi-first"
     key    = "terraform/state"
     region = "us-west-2"
-    profile = "sunny" #Ensure this profile exists in your AWS credentials
+    #profile = "sunny" #Ensure this profile exists in your AWS credentials
     use_lockfile = true
     encrypt      = true # Encrypt the state file
   }
