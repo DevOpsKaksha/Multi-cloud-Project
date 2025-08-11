@@ -8,3 +8,24 @@ variable "aws_region" {
   type        = string
   default     = "us-west-2"
 }
+
+variable "vm_name" {
+  description = "Name of the Azure VM"
+  type        = string
+  default     = "ravi-test-vm"
+}
+
+variable "location" {
+  description = "Azure region for resources"
+  type        = string
+  default     = "East US"
+}
+variable "admin_username" {
+  default = "raviadmin"
+}
+variable "admin_password" {
+  default = "P@ssword1234!"
+}
+variable "oidc_role_arn" {
+  type = string
+}
