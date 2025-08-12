@@ -35,5 +35,10 @@ jobs:
       - name: Terraform Init
         run: terraform init
 
+      - name: Run Gitleaks Secret Scan
+        uses: gitleaks/gitleaks-action@v2
+        with:
+          args: --verbose --redact
+
       - name: Terraform Plan
         run: terraform plan -var="oidc_role_arn=${{ secrets.OIDC_ROLE_ARN }}"
