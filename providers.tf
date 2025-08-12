@@ -22,9 +22,6 @@ terraform {
 provider "aws" {
   region = var.aws_region
   #profile = "sunny" #Ensure this profile exists in your AWS credentials
-  #assume_role {
-  #  role_arn = var.oidc_role_arn
-  #}
 }
 
 provider "azurerm" {
