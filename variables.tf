@@ -21,10 +21,13 @@ variable "location" {
   default     = "East US"
 }
 variable "admin_username" {
-  default = "raviadmin"
+ type        = string
+  description = "Admin username for the Azure VM"
 }
 variable "admin_password" {
-  default = "P@ssword1234!"
+  type = string
+  description = "Admin password for the Azure VM"
+  sensitive = true
 }
 variable "oidc_role_arn" {
   type = string

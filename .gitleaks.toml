@@ -1,0 +1,9 @@
+title = "Universal Password Variable Detection"
+description = "Detects any variable name containing 'password' or 'psward' (case-insensitive) followed by a quoted value"
+version = 2
+
+[[rules]]
+id = "terraform-password-variable-detection"
+description = "Detects hardcoded secrets in Terraform variables containing 'password' or 'psward'"
+regex = '''(?i)variable\s+"[^"]*(password|psward)[^"]*"\s*\{[^}]*default\s*=\s*["'][^"']*["']'''
+tags = ["terraform", "secrets", "iac"]
