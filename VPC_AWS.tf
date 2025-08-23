@@ -20,7 +20,7 @@ resource "aws_route_table" "public" {
   vpc_id = aws_vpc.main.id
 
   route {
-    cidr_block = "0.0.0.0/0"  # Route all traffic to the internet(Through internet gateway), if it's not local
+    cidr_block = "0.0.0.0/0"  # Route all traffic to the internet(Through internet gateway), if it's not local means if the address is not in the VPC CIDR block
     gateway_id = aws_internet_gateway.igw.id
     # Enables internet access for subnets associated with this route table(in next resource aws_route_table_association)
   }
